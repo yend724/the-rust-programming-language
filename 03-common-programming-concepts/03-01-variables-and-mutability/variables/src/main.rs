@@ -1,5 +1,5 @@
 fn main() {
-    let mut x = 5;
+    let mut x: i32 = 5;
     println!("The value of x is: {}", x);
     x = 6;
     println!("The value of x is: {}", x);
@@ -15,9 +15,11 @@ fn main() {
 
     println!("The value of x is: {}", x);
 
-    const MAX_POINTS: u32 = 100_000;
+    const _MAX_POINTS: u32 = 100_000; // 定数はconst
 
-    let mut spaces = "   ";
+    // let mut spaces = "   ";
     // spaces = spaces.len(); // mut の可変変数は型が違うとエラーになる
+    let spaces = "   ";
     let spaces = spaces.len(); // シャドーイングは型が違っても良い
+    println!("The value of spaces is: {}", spaces);
 }
